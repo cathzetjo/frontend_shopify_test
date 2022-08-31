@@ -1,0 +1,150 @@
+/* Смотри сколько снизу свободного места! Оно идеально подойдёт, чтобы писать твои стили! */
+
+:root {
+    --font-size-title: 24px;
+    --font-size-description: 16px;
+    --font-size-button: 18px;
+    --color-Background: #E5E5E5;
+    --color-White: #FFFFFF;
+    --color-Mine_Shaft: #2F2F2F;
+    --color-Verdun-Green: #1F5200;
+    --color-La-Palma: #42940F;
+    --color-Tundora: #4E4E4E;
+    --color-Golden-Tainoi: #FFCF56;
+    --color-Classic_Rose: #FDCFF3;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.week-goods {
+    padding: 64px 10px;
+    font-family: Arial, serif;
+    color: var(--color-Mine_Shaft);
+    background-color: var(--color-Background);
+}
+
+.week-goods__title {
+    margin-bottom: 37px;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 72px;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.products__card {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    height: 482px;
+    box-shadow: 0 0 45px -4px rgba(0, 0, 0, 0.18);
+    border-radius: 12px;
+    background-color: var(--color-White);
+}
+
+.products__card__picture {
+    height: 213.75px;
+    background: url(image.png);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.products__card__labels {
+    display: flex;
+    margin: 16px;
+    gap: 16px;
+    font-size: var(--font-size-description);
+}
+
+.products__card__label {
+    margin: 0;
+    padding: 5px 17px 3px 16px;
+    border-radius: 8px;
+    text-transform: uppercase;
+}
+
+.products__card__label_new {
+    background-color: var(--color-Classic_Rose);
+}
+
+.products__card__label_low-stock {
+    background-color: var(--color-Golden-Tainoi);
+}
+
+.products__card__info {
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px;
+    height: 268px;
+}
+
+.products__card__title {
+    margin: 24px 0 0;
+    font-weight: 900;
+    font-size: var(--font-size-title);
+    line-height: 38px;
+    text-align: left;
+}
+
+.products__card__description {
+    font-weight: 400;
+    font-size: var(--font-size-description);
+    line-height: 24px;
+}
+
+.products__card__button_container {
+    display: flex;
+    align-items: flex-end;
+    flex-grow: 2;
+}
+
+.products__card__button {
+    margin-bottom: 24px;
+    box-sizing: border-box;
+    width: 332px;
+    height: 48px;
+    font-size: var(--font-size-button);
+    font-weight: 900;
+    border: 2px solid;
+    border-radius: 8px;
+    text-transform: uppercase;
+    transition: 1.5s;
+}
+
+.products__card__button_available {
+    border-color: var(--color-La-Palma);
+    background-color: var(--color-White);
+    cursor: pointer;
+    color: var(--color-La-Palma);
+}
+
+.products__card__button_available:hover {
+    border-color: var(--color-La-Palma);
+    background-color: var(--color-La-Palma);
+    color: var(--color-White);
+}
+
+.products__card__button_available:active {
+    border-color: var(--color-Verdun-Green);
+    background-color: var(--color-Verdun-Green);
+    color: var(--color-White);
+}
+
+.products__card__button_finished {
+    border-color: var(--color-Tundora);
+    background-color: var(--color-Tundora);
+    cursor: not-allowed;
+    color: var(--color-White);
+}
