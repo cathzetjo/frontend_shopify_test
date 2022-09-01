@@ -27,7 +27,13 @@ const collapse = collapsibleContent.animate(
 
 collapsibleButton.addEventListener("click", () => {
     collapse.reverse();
-    (textShow.hidden) ? ((textHide.hidden = true) && (textShow.hidden = false)) : ((textShow.hidden = true) && (textHide.hidden = false));
+    if (textShow.hidden) {
+        textHide.hidden = true;
+        textShow.hidden = false;
+    } else {
+        textShow.hidden = true;
+        textHide.hidden = false;
+    }
 });
 
 
