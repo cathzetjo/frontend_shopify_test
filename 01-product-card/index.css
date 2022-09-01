@@ -4,14 +4,15 @@
     --font-size-title: 24px;
     --font-size-description: 16px;
     --font-size-button: 18px;
-    --color-Background: #E5E5E5;
-    --color-White: #FFFFFF;
-    --color-Mine_Shaft: #2F2F2F;
-    --color-Verdun-Green: #1F5200;
-    --color-La-Palma: #42940F;
-    --color-Tundora: #4E4E4E;
-    --color-Golden-Tainoi: #FFCF56;
-    --color-Classic_Rose: #FDCFF3;
+    --color-main-background: #E5E5E5;
+    --color-main-title: #000000;
+    --color-card-background: #FFFFFF;
+    --color-main-text: #2F2F2F;
+    --color-active-btn: #1F5200;
+    --color-hover-btn: #42940F;
+    --color-finish-btn: #4E4E4E;
+    --color-product-last: #FFCF56;
+    --color-product-new: #FDCFF3;
 }
 
 html, body {
@@ -22,8 +23,8 @@ html, body {
 .week-goods {
     padding: 64px 10px;
     font-family: Arial, serif;
-    color: var(--color-Mine_Shaft);
-    background-color: var(--color-Background);
+    color: var(--color-main-text);
+    background-color: var(--color-main-background);
 }
 
 .week-goods__title {
@@ -33,7 +34,7 @@ html, body {
     line-height: 72px;
     align-items: center;
     text-align: center;
-    color: #000000;
+    color: var(--color-main-title);
     text-transform: uppercase;
 }
 
@@ -44,53 +45,53 @@ html, body {
     gap: 20px;
 }
 
-.products__card {
+.product-card {
     display: flex;
     flex-direction: column;
     width: 380px;
     height: 482px;
     box-shadow: 0 0 45px -4px rgba(0, 0, 0, 0.18);
     border-radius: 12px;
-    background-color: var(--color-White);
+    background-color: var(--color-card-background);
 }
 
-.products__card__picture {
+.product-card__picture {
     height: 213.75px;
     background: url(image.png);
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
 }
 
-.products__card__labels {
+.product-card__labels {
     display: flex;
     margin: 16px;
     gap: 16px;
     font-size: var(--font-size-description);
 }
 
-.products__card__label {
+.product-card__label {
     margin: 0;
     padding: 5px 17px 3px 16px;
     border-radius: 8px;
     text-transform: uppercase;
 }
 
-.products__card__label_new {
-    background-color: var(--color-Classic_Rose);
+.product-card__label_new {
+    background-color: var(--color-product-new);
 }
 
-.products__card__label_low-stock {
-    background-color: var(--color-Golden-Tainoi);
+.product-card__label_low-stock {
+    background-color: var(--color-product-last);
 }
 
-.products__card__info {
+.product-card__info {
     display: flex;
     flex-direction: column;
     padding: 0 24px;
     height: 268px;
 }
 
-.products__card__title {
+.product-card__title {
     margin: 24px 0 0;
     font-weight: 900;
     font-size: var(--font-size-title);
@@ -98,19 +99,19 @@ html, body {
     text-align: left;
 }
 
-.products__card__description {
+.product-card__description {
     font-weight: 400;
     font-size: var(--font-size-description);
     line-height: 24px;
 }
 
-.products__card__button_container {
+.product-card__button_container {
     display: flex;
     align-items: flex-end;
     flex-grow: 2;
 }
 
-.products__card__button {
+.product-card__button {
     margin-bottom: 24px;
     box-sizing: border-box;
     width: 332px;
@@ -123,28 +124,28 @@ html, body {
     transition: 1.5s;
 }
 
-.products__card__button_available {
-    border-color: var(--color-La-Palma);
-    background-color: var(--color-White);
+.product-card__button_available {
+    border-color: var(--color-hover-btn);
+    background-color: var(--color-card-background);
     cursor: pointer;
-    color: var(--color-La-Palma);
+    color: var(--color-hover-btn);
 }
 
-.products__card__button_available:hover {
-    border-color: var(--color-La-Palma);
-    background-color: var(--color-La-Palma);
-    color: var(--color-White);
+.product-card__button_available:hover {
+    border-color: var(--color-hover-btn);
+    background-color: var(--color-hover-btn);
+    color: var(--color-card-background);
 }
 
-.products__card__button_available:active {
-    border-color: var(--color-Verdun-Green);
-    background-color: var(--color-Verdun-Green);
-    color: var(--color-White);
+.product-card__button_available:active {
+    border-color: var(--color-active-btn);
+    background-color: var(--color-active-btn);
+    color: var(--color-card-background);
 }
 
-.products__card__button_finished {
-    border-color: var(--color-Tundora);
-    background-color: var(--color-Tundora);
+.product-card__button_finished {
+    border-color: var(--color-finish-btn);
+    background-color: var(--color-finish-btn);
     cursor: not-allowed;
-    color: var(--color-White);
+    color: var(--color-card-background);
 }
