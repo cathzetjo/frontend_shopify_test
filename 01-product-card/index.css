@@ -10,7 +10,7 @@
     --color-main-text: #2F2F2F;
     --color-active-btn: #1F5200;
     --color-hover-btn: #42940F;
-    --color-finish-btn: #4E4E4E;
+    --color-disabled-btn: #4E4E4E;
     --color-product-last: #FFCF56;
     --color-product-new: #FDCFF3;
 }
@@ -121,31 +121,31 @@ html, body {
     border: 2px solid;
     border-radius: 8px;
     text-transform: uppercase;
-    transition: 1.5s;
+    transition: background-color, color, 1.5s;
 }
 
-.product-card__button_available {
+.product-card__button--available {
     border-color: var(--color-hover-btn);
     background-color: var(--color-card-background);
     cursor: pointer;
     color: var(--color-hover-btn);
 }
 
-.product-card__button_available:hover {
+.product-card__button--available:hover {
     border-color: var(--color-hover-btn);
     background-color: var(--color-hover-btn);
     color: var(--color-card-background);
 }
 
-.product-card__button_available:active {
+.product-card__button--available:active {
     border-color: var(--color-active-btn);
     background-color: var(--color-active-btn);
     color: var(--color-card-background);
 }
 
-.product-card__button_finished {
-    border-color: var(--color-finish-btn);
-    background-color: var(--color-finish-btn);
+.product-card__button--disabled {
+    border-color: var(--color-disabled-btn);
+    background-color: var(--color-disabled-btn);
     cursor: not-allowed;
     color: var(--color-card-background);
 }
