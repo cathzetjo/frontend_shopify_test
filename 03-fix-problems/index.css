@@ -32,9 +32,3 @@ body {
     font-style: italic;
     text-align: center;
 }
-
-@media (max-width: 768px) {
-    .figure__image {
-        width: 94%;
-    }
-}
