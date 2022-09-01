@@ -3,15 +3,9 @@ const collapsibleContent = document.querySelector('.collapsible__content');
 const textHide = document.querySelector('.collapsible__action--visible');
 const textShow = document.querySelector('.collapsible__action--hidden');
 
-document.addEventListener('DOMContentLoaded', () => {
-    textShow.hidden = true;
-    collapse.finish();
-    collapsibleButton.style.cursor="pointer";
-});
-
 const collapseProperty = [
-    {opacity: "0"},
-    {opacity: "1"},
+    { opacity: "0" },
+    { opacity: "1" },
 ];
 
 const collapseEffect = {
@@ -25,15 +19,17 @@ const collapse = collapsibleContent.animate(
     collapseEffect,
 );
 
+document.addEventListener('DOMContentLoaded', () => {
+    textShow.hidden = true;
+    collapse.finish();
+    collapsibleButton.style.cursor="pointer";
+});
+
 collapsibleButton.addEventListener("click", () => {
     collapse.reverse();
-    if (textShow.hidden) {
-        textHide.hidden = true;
-        textShow.hidden = false;
-    } else {
-        textShow.hidden = true;
-        textHide.hidden = false;
-    }
+    const isHidden = textShow.hidden;
+        textHide.hidden = isHidden;
+        textShow.hidden = !isHidden;
 });
 
 
