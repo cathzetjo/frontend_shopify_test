@@ -121,7 +121,7 @@ html, body {
     border: 2px solid;
     border-radius: 8px;
     text-transform: uppercase;
-    transition: background-color, color, 1.5s;
+    transition: background-color, color, 500ms;
 }
 
 .product-card__button--available {
