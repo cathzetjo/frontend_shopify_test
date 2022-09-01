@@ -4,12 +4,8 @@ body {
     font-family: sans-serif;
 }
 
-* {
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .article {
+    margin: 0 auto;
     max-width: 680px;
     padding: 24px;
 }
@@ -25,6 +21,10 @@ body {
     text-transform: uppercase;
     font-style: italic;
     font-family: serif;
+}
+
+.article__figure {
+    margin: 0;
 }
 
 .figure__caption {
