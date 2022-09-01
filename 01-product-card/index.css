@@ -57,7 +57,7 @@ html, body {
 
 .product-card__picture {
     height: 213.75px;
-    background: url(image.png);
+    background: url(image.jpg);
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
 }
@@ -100,15 +100,10 @@ html, body {
 }
 
 .product-card__description {
+    height: 102px;
     font-weight: 400;
     font-size: var(--font-size-description);
     line-height: 24px;
-}
-
-.product-card__button_container {
-    display: flex;
-    align-items: flex-end;
-    flex-grow: 2;
 }
 
 .product-card__button {
